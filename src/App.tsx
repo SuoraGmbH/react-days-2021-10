@@ -1,4 +1,5 @@
 import { MessageCompose } from "./components/MessageCompose";
+import { MessageList } from "./components/MessageList";
 import { MessageView } from "./components/MessageView";
 
 export function App() {
@@ -14,6 +15,7 @@ export function App() {
         }}
       />
       <MessageCompose />
+      <MessageList />
     </>
   );
 }
