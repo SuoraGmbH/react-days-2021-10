@@ -1,3 +1,4 @@
+import { MessageCompose } from "./components/MessageCompose";
 import { MessageView } from "./components/MessageView";
 
 export function App() {
@@ -12,6 +13,7 @@ export function App() {
           message: "Hallo welt",
         }}
       />
+      <MessageCompose />
     </>
   );
 }
