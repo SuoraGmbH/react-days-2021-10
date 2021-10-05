@@ -1,13 +1,14 @@
+import { Message } from "../domain/Message";
+
 interface Props {
-  name: string;
-  opinion: string;
+  message: Message;
 }
 
-export function MessageView({ opinion, name }: Props): JSX.Element {
+export function MessageView({ message }: Props): JSX.Element {
   return (
     <article>
-      {opinion}
-      <footer>{name.toUpperCase()}</footer>
+      {message.message}
+      <footer>{message.author.toUpperCase()}</footer>
     </article>
   );
 }
