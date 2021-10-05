@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {App} from "./App"
 
-const element = <h1>Hallo Kölllle!</h1>;
+
+const element = <App />;
 
 console.log("Hello WOrld")
 
