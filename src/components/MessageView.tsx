@@ -1,10 +1,12 @@
 import { Message } from "../domain/Message";
 
-interface Props {
+interface MessageViewProps {
   message: Message;
 }
 
-export const MessageView: React.FunctionComponent<Props> = ({ message }) => {
+export const MessageView: React.FunctionComponent<MessageViewProps> = ({
+  message,
+}) => {
   return (
     <article>
       {message.message}
