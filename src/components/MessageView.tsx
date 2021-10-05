@@ -24,3 +24,12 @@ export function MessageView({ opinion, name }: Props): JSX.Element {
     </article>
   );
 }
+
+export function MessageView2({ opinion, name }: Props): JSX.Element {
+  return (
+    <article>
+      {opinion}
+      {name && <footer>{name.toUpperCase()}</footer>}
+    </article>
+  );
+}
