@@ -1,6 +1,6 @@
 import { useCounter } from "../hooks/useCounter";
 
-export function Counter() {
+export function CounterWithHook() {
   const { count, increase } = useCounter();
   return (
     <div>
