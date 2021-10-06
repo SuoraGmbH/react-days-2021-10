@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Message } from "../domain/Message";
 
 interface UseMessagesReturnValue {
@@ -6,8 +7,12 @@ interface UseMessagesReturnValue {
 }
 
 export const useMessages = (): UseMessagesReturnValue => {
+  const [messages, setMessages] = useState<Message[]>([]);
+
   return {
-    messages: [],
-    addMessage: () => {},
+    messages: messages,
+    addMessage: (message) => {
+      setMessages([...messages, message]);
+    },
   };
 };
