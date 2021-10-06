@@ -8,8 +8,6 @@ export function App() {
   return (
     <>
       <h1>Hallo Leipzig!</h1>
-      <GithubStats repo="facebook/react" />
-      <GithubStats repo="SuoraGmbH/react-days-2021-10" />
       <MessageView
         message={{
           author: "Florian",
@@ -22,6 +20,7 @@ export function App() {
       <MessageList />
       <hr />
       <Counter />
+      <GithubStats repo="SuoraGmbH/react-days-2021-10" />
     </>
   );
 }
