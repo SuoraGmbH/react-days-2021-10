@@ -26,7 +26,9 @@ export function App() {
           message: "Hallo welt",
         }}
       />
-      <DynamicMessageList />
+      <div style={{ border: "5px solid pink" }}>
+        <DynamicMessageList />
+      </div>
       <MessageCompose onMessageSend={handleMessageSend} />
       <MessageList messages={messages} />
       <hr />
