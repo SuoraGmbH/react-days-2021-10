@@ -7,13 +7,10 @@ import { MessageView } from "./components/MessageView";
 import { Message } from "./domain/Message";
 
 export function App() {
-  const [messages, setMessages] = useState([
-    { author: "Florian", date: 123, id: "asd", message: "Hallooooo" },
-    { author: "Richard", date: 12423, id: "asdsadasd", message: "Hallo!!" },
-    { author: "Anni", date: 12356, id: "a312231sd", message: "Hello!" },
-  ]);
+  const [messages, setMessages] = useState<Readonly<Message[]>>([]);
 
   const handleMessageSend = (message: Message) => {
+    // messages.push() // not allowed because of Readonly in line 10
     setMessages([...messages, message]);
   };
 
