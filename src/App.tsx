@@ -1,3 +1,4 @@
+import { Counter } from "./components/Counter";
 import { MessageCompose } from "./components/MessageCompose";
 import { MessageList } from "./components/MessageList";
 import { MessageView } from "./components/MessageView";
@@ -16,6 +17,8 @@ export function App() {
       />
       <MessageCompose />
       <MessageList />
+      <hr />
+      <Counter />
     </>
   );
 }
