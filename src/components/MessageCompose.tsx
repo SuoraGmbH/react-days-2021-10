@@ -5,7 +5,7 @@ interface Props {
   onMessageSend: (message: Message) => void;
 }
 
-export const MessageCompose: React.FunctionComponent<Props> = () => {
+export const MessageCompose: React.FunctionComponent<Props> = (props) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
@@ -13,6 +13,13 @@ export const MessageCompose: React.FunctionComponent<Props> = () => {
 
     if (inputValue !== "") {
       console.log("Abgesendete Nachricht: ", inputValue);
+
+      props.onMessageSend({
+        author: "Richard",
+        message: inputValue,
+        date: Date.now(),
+        id: String(Date.now()),
+      });
       setInputValue("");
     }
   };

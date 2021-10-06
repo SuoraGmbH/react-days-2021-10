@@ -13,6 +13,10 @@ export function App() {
     { author: "Anni", date: 12356, id: "a312231sd", message: "Hello!" },
   ]);
 
+  const handleMessageSend = (message: Message) => {
+    setMessages([...messages, message]);
+  };
+
   return (
     <>
       <h1>Hallo Leipzig!</h1>
@@ -24,7 +28,7 @@ export function App() {
           message: "Hallo welt",
         }}
       />
-      <MessageCompose onMessageSend={console.log} />
+      <MessageCompose onMessageSend={handleMessageSend} />
       <MessageList messages={messages} />
       <hr />
       <Counter />
