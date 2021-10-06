@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Counter } from "./components/Counter";
+import { CounterWithHook } from "./components/CounterWithHook";
 import { DynamicMessageList } from "./components/DynamicMessageList";
 import { GithubStats } from "./components/GithubStats";
 import { MessageCompose } from "./components/MessageCompose";
@@ -28,6 +29,7 @@ export function App() {
       />
       <div style={{ border: "5px solid pink" }}>
         <DynamicMessageList />
+        <CounterWithHook />
       </div>
       <MessageCompose onMessageSend={handleMessageSend} />
       <MessageList messages={messages} />
