@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { Message } from "../domain/Message";
 
-export const MessageCompose: React.FunctionComponent = () => {
+interface Props {
+  onMessageSend: (message: Message) => void;
+}
+
+export const MessageCompose: React.FunctionComponent<Props> = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {

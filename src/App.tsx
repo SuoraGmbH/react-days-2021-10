@@ -24,7 +24,7 @@ export function App() {
           message: "Hallo welt",
         }}
       />
-      <MessageCompose />
+      <MessageCompose onMessageSend={console.log} />
       <MessageList messages={messages} />
       <hr />
       <Counter />
