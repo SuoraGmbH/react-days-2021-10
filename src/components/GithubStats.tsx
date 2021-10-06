@@ -16,15 +16,11 @@ export const GithubStats: React.FunctionComponent = () => {
       .then(setStats);
   }, []);
 
-  if (!stats) {
-    return <p>Loading…</p>;
-  }
-
   return (
     <div>
       <h1>Github</h1>
-      <p>Stars: {stats.stargazers_count}</p>
-      <p>Forks: {stats.forks_count}</p>
+      <p>Stars: {stats?.stargazers_count}</p>
+      <p>Forks: {stats?.forks_count}</p>
     </div>
   );
 };
