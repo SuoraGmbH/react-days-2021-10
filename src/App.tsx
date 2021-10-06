@@ -7,7 +7,7 @@ import { MessageView } from "./components/MessageView";
 import { Message } from "./domain/Message";
 
 export function App() {
-  const [messages, setMessages] = useState<Readonly<Message[]>>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   const handleMessageSend = (message: Message) => {
     // messages.push() // not allowed because of Readonly in line 10
