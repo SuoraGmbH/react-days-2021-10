@@ -8,7 +8,8 @@ export function App() {
   return (
     <>
       <h1>Hallo Leipzig!</h1>
-      <GithubStats />
+      <GithubStats repo="facebook/react" />
+      <GithubStats repo="SuoraGmbH/react-days-2021-10" />
       <MessageView
         message={{
           author: "Florian",
