@@ -7,6 +7,10 @@ import { MessageCompose } from "./components/MessageCompose";
 import { MessageList } from "./components/MessageList";
 import { MessageView } from "./components/MessageView";
 import { Message } from "./domain/Message";
+import { configureStore } from "./redux/configureStore";
+import { Provider } from "react-redux";
+
+const store = configureStore();
 
 export function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -17,7 +21,7 @@ export function App() {
   };
 
   return (
-    <>
+    <Provider store={store}>
       <h1>Hallo Leipzig!</h1>
       <MessageView
         message={{
@@ -36,7 +40,7 @@ export function App() {
       <hr />
       <Counter />
       <GithubStats repo="SuoraGmbH/react-days-2021-10" />
-    </>
+    </Provider>
   );
 }
 
