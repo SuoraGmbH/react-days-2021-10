@@ -8,18 +8,23 @@ const initialState: ApplicationState = {
   messages: [],
 };
 
-const MESSAGE_ADDED = "Message/Added";
-
 interface MessageAddedAction {
-  type: string;
+  type: "Message/Added";
   payload: Message;
 }
 
+interface InitAction {
+  type: "@@INIT";
+}
+
+type MessageAction = MessageAddedAction;
+type ApplicationAction = InitAction | MessageAction;
+
 export const reducer = (
   state: ApplicationState = initialState,
-  action: MessageAddedAction
+  action: ApplicationAction
 ): ApplicationState => {
-  if (action.type === MESSAGE_ADDED) {
+  if (action.type === "Message/Added") {
     return {
       ...state,
       messages: [...state.messages, action.payload],
