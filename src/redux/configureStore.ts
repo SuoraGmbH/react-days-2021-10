@@ -1,10 +1,5 @@
 import { createStore } from "redux";
-
-export interface ApplicationState {}
-
-const initialState: ApplicationState = {};
-
-const reducer = (state = initialState) => state;
+import { reducer } from "./reducer";
 
 export const configureStore = () => {
   return createStore(
