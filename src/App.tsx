@@ -9,6 +9,7 @@ import { MessageView } from "./components/MessageView";
 import { Message } from "./domain/Message";
 import { configureStore } from "./redux/configureStore";
 import { Provider } from "react-redux";
+import { MessageListFromRedux } from "./components/MessageListFromRedux";
 
 const store = configureStore();
 
@@ -23,6 +24,10 @@ export function App() {
   return (
     <Provider store={store}>
       <h1>Hallo Leipzig!</h1>
+      <div style={{ border: "3px solid green" }}>
+        <h3>Redux</h3>
+        <MessageListFromRedux />
+      </div>
       <MessageView
         message={{
           author: "Florian",

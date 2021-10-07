@@ -33,3 +33,7 @@ export const reducer = (
 
   return state;
 };
+
+export const getMessages = (state: ApplicationState): Message[] => {
+  return state.messages;
+};
