@@ -27,6 +27,16 @@ export const addedMessage = (message: Message): MessageAddedAction => {
   };
 };
 
+export const fetchMessages = () => (dispatch) => {
+  fetch("from backend")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((message) => {
+        dispatch(addedMessage(message));
+      });
+    });
+};
+
 export const reducer = (
   state: ApplicationState = initialState,
   action: ApplicationAction
