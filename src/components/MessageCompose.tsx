@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Message } from "../domain/Message";
-
+import { Button } from "./Button";
 interface Props {
   onMessageSend: (message: Message) => void;
 }
@@ -32,7 +32,9 @@ export const MessageCompose: React.FunctionComponent<Props> = (props) => {
     <form onSubmit={handleSubmit}>
       <input value={inputValue} onChange={handleChange} />
       {inputValue}
-      <button type="submit">Absenden</button>
+      <Button type="submit" disabled={!inputValue}>
+        Absenden
+      </Button>
     </form>
   );
 };
