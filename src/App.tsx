@@ -10,6 +10,7 @@ import { Message } from "./domain/Message";
 import { configureStore } from "./redux/configureStore";
 import { Provider } from "react-redux";
 import { MessageListFromRedux } from "./components/MessageListFromRedux";
+import { MessageComposeForRedux } from "./components/MessageComposeForRedux";
 
 const store = configureStore();
 
@@ -27,6 +28,7 @@ export function App() {
       <div style={{ border: "3px solid green" }}>
         <h3>Redux</h3>
         <MessageListFromRedux />
+        <MessageComposeForRedux />
       </div>
       <MessageView
         message={{

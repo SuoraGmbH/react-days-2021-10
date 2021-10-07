@@ -20,6 +20,13 @@ interface InitAction {
 type MessageAction = MessageAddedAction;
 type ApplicationAction = InitAction | MessageAction;
 
+export const addedMessage = (message: Message): MessageAddedAction => {
+  return {
+    type: "Message/Added",
+    payload: message,
+  };
+};
+
 export const reducer = (
   state: ApplicationState = initialState,
   action: ApplicationAction
