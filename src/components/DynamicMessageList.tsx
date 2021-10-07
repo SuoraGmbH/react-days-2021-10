@@ -1,9 +1,10 @@
 import { useMessages } from "../hooks/useMessages";
+import { useMessagesFromRedux } from "../hooks/useMessagesFromRedux";
 import { MessageCompose } from "./MessageCompose";
 import { MessageList } from "./MessageList";
 
 export const DynamicMessageList: React.FunctionComponent = () => {
-  const { messages, addMessage } = useMessages();
+  const { messages, addMessage } = useMessagesFromRedux();
 
   return (
     <>

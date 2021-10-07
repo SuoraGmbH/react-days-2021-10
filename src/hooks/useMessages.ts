@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Message } from "../domain/Message";
 
-interface UseMessagesReturnValue {
+export interface UseMessagesReturnValue {
   messages: Message[];
   addMessage: (message: Message) => void;
 }
